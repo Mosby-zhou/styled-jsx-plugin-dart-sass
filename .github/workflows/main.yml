@@ -44,13 +44,14 @@ jobs:
           node-version: 12
       - name: Publish gpr
         run: |
+          sed -i 's/"name": "\(.*\)",$/"name": "@mosby-zhou\/\1",/ig' package.json
           npm config set //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
-          npm publish -registry https://npm.pkg.github.com/@mosby-zhou --access public
+          npm publish -registry https://npm.pkg.github.com --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-      - name: Deploy github pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+      # - name: Deploy github pages
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./docs
