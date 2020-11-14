@@ -21,22 +21,22 @@ jobs:
         with:
           node-version: 12
 
-      - name: Check & Build
-        run: |
-          npm ci
-          npm run test
-          npm run check-release-version
+      # - name: Check & Build
+      #   run: |
+      #     npm ci
+      #     npm run test
+      #     npm run check-release-version
 
-      - name: Use npm
-        uses: actions/setup-node@master
-        with:
-          node-version: 12
-      - name: Publish npm
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=${{ secrets.npm_token }}
-          npm publish -registry https://registry.npmjs.org --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      # - name: Use npm
+      #   uses: actions/setup-node@master
+      #   with:
+      #     node-version: 12
+      # - name: Publish npm
+      #   run: |
+      #     npm config set //registry.npmjs.org/:_authToken=${{ secrets.npm_token }}
+      #     npm publish -registry https://registry.npmjs.org --access public
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
       - name: Use gpr
         uses: actions/setup-node@master

@@ -1,6 +1,6 @@
 {
   "name": "styled-jsx-plugin-dart-sass",
-  "version": "1.0.1",
+  "version": "0.0.2",
   "description": "Plugin to add Sass support to styled-jsx",
   "main": "index.js",
   "files": [
