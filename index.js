@@ -1,5 +1,4 @@
-const sass = require('node-sass');
-const path = require('path');
+const sass = require('sass');
 
 module.exports = (css, settings) => {
   const cssWithPlaceholders = css
