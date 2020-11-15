@@ -1,7 +1,6 @@
 # styled-jsx-plugin-dart-sass
 
-[![Build Status](https://travis-ci.org/giuseppeg/styled-jsx-plugin-sass.svg?branch=master)](https://travis-ci.org/giuseppeg/styled-jsx-plugin-sass)
-[![npm](https://img.shields.io/npm/v/styled-jsx-plugin-sass.svg)](https://www.npmjs.com/package/styled-jsx-plugin-sass)
+[![npm](https://img.shields.io/npm/v/styled-jsx-plugin-dart-sass.svg)](https://www.npmjs.com/package/styled-jsx-plugin-dart-sass)
 
 Use [Sass](http://sass-lang.com/) with [styled-jsx](https://github.com/zeit/styled-jsx) 💥
 
@@ -27,9 +26,9 @@ Next, add `styled-jsx-plugin-dart-sass` to the `styled-jsx`'s `plugins` in your 
 }
 ```
 
-## Node-sass options
+## Dart-sass options
 
-Node-sass can be configured using `sassOptions`. This is useful for setting options such as `includePaths` or `precision`.
+Dart-sass can be configured using `sassOptions`. This is useful for setting options such as `includePaths`.
 
 ```json
 {
